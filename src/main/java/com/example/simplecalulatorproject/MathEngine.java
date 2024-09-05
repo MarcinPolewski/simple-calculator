@@ -13,8 +13,8 @@ class MathEngine {
 
     void numberPressed(int pressedNumber)
     {
-        screen*=10;
-        screen+= pressedNumber;
+        screen *= 10;
+        screen += pressedNumber;
     }
 
     void plusPressed() {
@@ -50,9 +50,6 @@ class MathEngine {
         screen = accumulator;
 
         operationToPerform = (x,y) -> x;
-    }
-
-    void dotPressed() {
     }
 
     String getScreenValue()
