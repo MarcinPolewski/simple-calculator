@@ -10,7 +10,10 @@ public class MainSceneController {
     Label mainScreenLabel;
 
     @FXML
-    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonMinus, buttonDivision, buttonMultiplication, buttonDot, buttonEquals;
+    Button button1, button2, button3, button4, button5,
+            button6, button7, button8, button9, button0,
+            buttonPlus, buttonMinus, buttonDivision, buttonMultiplication,
+            buttonDot, buttonEquals, buttonC, buttonCE, buttonSqrt, buttonSign;
 
     MathEngine mathEngine = new MathEngine();
 
@@ -96,5 +99,28 @@ public class MainSceneController {
         updateScreen();
     }
 
+    public void cButtonPressed(ActionEvent event)
+    {
+        mathEngine.clearScreen();
+        updateScreen();
+    }
 
+    public void ceButtonPressed(ActionEvent event)
+    {
+        mathEngine.clearAccumulator();
+        mathEngine.clearScreen();
+        updateScreen();
+    }
+
+    public void sqrtButtonPressed(ActionEvent event)
+    {
+        mathEngine.sqrtPressed();
+        updateScreen();
+    }
+
+    public void signButtonPressed(ActionEvent event)
+    {
+        mathEngine.changeSign();
+        updateScreen();
+    }
 }
